@@ -47,7 +47,7 @@ export default function Hero() {
               <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-full p-0.5 bg-gradient-to-tr from-brand-500 via-purple-500 to-pink-500">
                 <div className="w-full h-full rounded-full overflow-hidden bg-slate-100">
                   <img
-                    src="/profile.png"
+                    src={`${import.meta.env.BASE_URL}profile.png`}
                     alt="Thrinadh Sai Nimmagadda"
                     className="w-full h-full object-cover object-top"
                   />
@@ -130,7 +130,7 @@ export default function Hero() {
                 Get in Touch
               </a>
               <a
-                href="/Thrinadh_Sai_Nimmagadda_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Thrinadh_Sai_Nimmagadda_Resume.pdf`}
                 download="Thrinadh_Sai_Nimmagadda_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
