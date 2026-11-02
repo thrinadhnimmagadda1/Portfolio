@@ -94,7 +94,7 @@ export default function Hero() {
               className="text-base md:text-lg text-gray-500 leading-relaxed mb-6 animate-slide-up"
               style={{ animationDelay: '0.3s' }}
             >
-              Software Engineer with 3 years building scalable ML systems and low-latency inference services.
+              {personal.tagline}
             </p>
 
             {/* Key stats */}
@@ -103,9 +103,9 @@ export default function Hero() {
               style={{ animationDelay: '0.35s' }}
             >
               {[
-                { value: '<150ms', label: 'API Latency' },
-                { value: '500+', label: 'Users Served' },
-                { value: '23ms', label: 'Pipeline (was 10min)' },
+                { value: '20%', label: 'API Latency Reduction' },
+                { value: '100K+', label: 'Research Papers' },
+                { value: '50% → 80%', label: 'Parsing Accuracy' },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-sm">
                   <div className="text-lg font-extrabold gradient-text">{stat.value}</div>

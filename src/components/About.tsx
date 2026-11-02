@@ -6,7 +6,7 @@ const highlights = [
   { icon: Brain, label: 'ML Systems', desc: 'TF-IDF, BERT, XGBoost — from model training to production inference' },
   { icon: Code2, label: 'Python & Java', desc: 'Full-stack engineering across Spring Boot, FastAPI, Django, and Flask' },
   { icon: Layers, label: 'NLP Pipelines', desc: 'SBERT embeddings, UMAP reduction, K-Means clustering at scale' },
-  { icon: Zap, label: 'Latency Optimization', desc: 'Async workers + caching reduced pipeline from 10+ min to 23ms' },
+  { icon: Zap, label: 'Latency Optimization', desc: 'Async processing and caching reduced queries from minutes to seconds' },
 ];
 
 export default function About() {
