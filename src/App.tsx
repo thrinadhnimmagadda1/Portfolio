@@ -105,10 +105,6 @@ export default function App() {
           className="mx-auto max-w-6xl px-5 md:px-8 pt-24 pb-24 md:pt-32 md:pb-32"
         >
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-4 py-2 text-blue-700 text-sm font-medium mb-8">
-              <span className="h-2 w-2 rounded-full bg-blue-500" /> Open to AI
-              Engineer, Backend Engineer & Software Engineer roles
-            </div>
             <p className="text-lg font-semibold text-slate-500 mb-4">
               Hi, I'm Thrinadh Sai Nimmagadda.
             </p>
