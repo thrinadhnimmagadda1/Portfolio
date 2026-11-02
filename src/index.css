@@ -44,3 +44,94 @@ a:focus-visible {
     scroll-padding-top: 85px;
   }
 }
+
+/* Decorative layers stay behind content and never intercept interaction. */
+main {
+  isolation: isolate;
+  overflow: clip;
+  background: linear-gradient(180deg, #ffffff 0%, #fcfdff 48%, #ffffff 100%);
+}
+#home {
+  position: relative;
+  isolation: isolate;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  pointer-events: none;
+  width: 100vw;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(ellipse at 87% 25%, rgb(191 219 254 / 55%), transparent 46%),
+    radial-gradient(ellipse at 65% 80%, rgb(221 214 254 / 35%), transparent 45%),
+    linear-gradient(rgb(59 130 246 / 6%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(59 130 246 / 6%) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  mask-image: linear-gradient(90deg, transparent, #000 60%),
+    linear-gradient(180deg, #000 70%, transparent);
+  mask-composite: intersect;
+}
+#home::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 390px;
+  height: 390px;
+  right: -180px;
+  top: 80px;
+  border: 1px solid rgb(59 130 246 / 14%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 48px rgb(59 130 246 / 4%),
+    0 0 0 49px rgb(59 130 246 / 8%),
+    0 0 0 97px rgb(99 102 241 / 3%),
+    0 0 0 98px rgb(99 102 241 / 7%);
+  background: radial-gradient(circle at 28% 18%, #93c5fd 0 4px, transparent 5px);
+}
+#experience,
+#skills {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(219 234 254 / 45%), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgb(224 231 255 / 30%), transparent 45%),
+    #f8fafc;
+}
+#projects > div > article,
+#experience article,
+#skills > div > div > div,
+#education article {
+  background-color: rgb(255 255 255 / 90%);
+  box-shadow: 0 4px 20px -12px rgb(30 64 175 / 16%);
+}
+#contact {
+  position: relative;
+  isolation: isolate;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0 -20vw;
+  background:
+    radial-gradient(ellipse at 50% 75%, rgb(219 234 254 / 60%), transparent 65%),
+    radial-gradient(ellipse at 80% 10%, rgb(224 231 255 / 35%), transparent 45%);
+}
+@media (max-width: 640px) {
+  #home::before {
+    background-size: auto, auto, 36px 36px, 36px 36px;
+    opacity: 0.7;
+  }
+  #home::after {
+    width: 240px;
+    height: 240px;
+    right: -200px;
+    top: 70px;
+    opacity: 0.55;
+  }
+}
