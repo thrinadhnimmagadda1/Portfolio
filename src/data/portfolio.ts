@@ -1,10 +1,10 @@
-// Content aligned with the supplied résumé and LinkedIn screenshots.
+// Content aligned with the supplied résumé, LinkedIn screenshots, and user revisions.
 
 export const personal = {
   name: "Thrinadh Sai Nimmagadda",
-  title: "Software Engineer · Backend & AI/ML",
+  title: "Software Engineer | Backend & AI Engineering",
   tagline:
-    "Software Engineer with 3+ years of industry experience building backend systems, NLP pipelines, and applied AI products.",
+    "Software engineer with 3+ years of industry experience, focused on backend and AI engineering. I build reliable APIs, RAG pipelines, and intelligent applications.",
   email: "thrinadhnimmagadda20@gmail.com",
   phone: "(803) 354-8350",
   linkedin: "https://www.linkedin.com/in/thrinadhsainimmagadda/",
@@ -25,6 +25,7 @@ export const experiences = [
       "Lead weekly hands-on labs for 40+ undergraduate students in Java, data structures, and object-oriented programming, translating complex concepts into approachable exercises.",
     ],
     tags: ["Java", "Data Structures", "OOP"],
+    summary: "",
   },
   {
     id: 1,
@@ -34,11 +35,13 @@ export const experiences = [
     period: "May 2025 – Aug 2025",
     type: "Part-time",
     bullets: [
-      "Organized 100K+ research papers using Sentence-BERT embeddings and UMAP, enabling semantic search beyond keyword matching.",
-      "Integrated paper-specific RAG Q&A with chunked PDF embeddings and a local LLaMA model; built Django REST APIs and an interactive React frontend.",
-      "Reduced query response times from minutes to seconds with asynchronous processing and caching.",
+      "Built an NLP clustering pipeline using Sentence-BERT embeddings and UMAP dimensionality reduction to organize 100K+ research papers into explorable topic clusters, enabling semantic search beyond keyword matching.",
+      "Added a per-paper RAG chat feature — chunking and embedding each paper’s PDF on demand, retrieving the top-3 most relevant chunks for a user’s question, and generating answers with a locally-run LLaMA model (via Ollama) to avoid per-query token costs — allowing researchers to ask questions directly about a specific paper’s methods and findings.",
+      "Developed Django REST Framework APIs to serve clustered document data and built a React frontend so researchers could interactively query and visualize results rather than working with static output.",
+      "Used asynchronous processing and caching to keep the interface responsive at scale, reducing query time from minutes to seconds for large cluster queries.",
     ],
     tags: ["Python", "Sentence-BERT", "UMAP", "Django", "React", "RAG"],
+    summary: "",
   },
   {
     id: 2,
@@ -48,11 +51,16 @@ export const experiences = [
     period: "Jul 2021 – Aug 2024",
     type: "Full-time",
     bullets: [
-      "Improved résumé parsing accuracy from 50% to 80% with secondary extraction passes that identify skills in job descriptions and experience text.",
-      "Reduced API latency by 20% through response workflow improvements and batched database writes.",
-      "Reconstructed reading order in multi-column PDFs and normalized formatting and line breaks across PDF and Word résumés.",
+      "Built SQL storage and REST API integrations connecting structured resume data to automated job application forms.",
+      "Improved PDF and Word resume processing by normalizing formatting, handling broken line breaks, and resolving extraction issues across different resume layouts.",
+      "Fixed garbled extraction in two-column PDF resumes by grouping text blocks based on horizontal position and reconstructing column-wise reading order.",
+      "Added a secondary extraction pass to identify skills embedded within job descriptions and experience text, improving extraction accuracy from ~50% to ~80% on problematic resume formats.",
+      "Reduced API latency by ~20% by optimizing the response flow and batching database writes.",
+      "Wrote unit tests and debugged data quality issues in extracted resume fields to improve autofill reliability.",
     ],
     tags: ["Python", "REST APIs", "Document Processing", "Backend Engineering"],
+    summary:
+      "Worked on a resume parsing and job application autofill platform for recruiting client MPG, focusing on document extraction, backend integration, accuracy, and performance.",
   },
 ];
 
@@ -173,46 +181,63 @@ export const skills = [
     category: "Machine Learning & NLP",
     icon: "🧠",
     items: [
-      "LLMs",
-      "RAG Pipelines",
       "NLP",
-      "XGBoost",
-      "scikit-learn",
-      "TensorFlow",
       "PyTorch",
+      "TensorFlow",
+      "scikit-learn",
+      "XGBoost",
       "SHAP",
+      "SMOTE",
+      "BERT",
       "Sentence-Transformers",
     ],
   },
   {
-    category: "Frameworks & Libraries",
+    category: "LLMs & AI Agents",
+    icon: "🔧",
+    items: [
+      "LLMs (OpenAI API)",
+      "RAG Pipelines",
+      "LangChain",
+      "LangGraph",
+      "AutoGen",
+      "AI Agents",
+      "Hugging Face",
+      "RAGAS",
+    ],
+  },
+  {
+    category: "Backend & Frontend",
     icon: "⚙️",
     items: [
       "FastAPI",
       "Django",
       "Flask",
       "Spring Boot",
+      "REST APIs",
+      "Microservices",
       "React",
-      "LangChain",
-      "LangGraph",
-      "Hugging Face",
-      "FAISS",
     ],
   },
   {
-    category: "Databases & Tools",
+    category: "Databases & Retrieval",
     icon: "🗄️",
-    items: [
-      "PostgreSQL",
-      "MySQL",
-      "Redis",
-      "Docker",
-      "Git",
-      "CI/CD",
-      "Kafka",
-      "ChromaDB",
-      "Power BI",
-    ],
+    items: ["PostgreSQL", "MySQL", "Redis", "FAISS", "ChromaDB", "DBMS"],
+  },
+  {
+    category: "Data & Analytics",
+    icon: "📊",
+    items: ["Pandas", "Power BI", "Excel"],
+  },
+  {
+    category: "Cloud & Engineering Tools",
+    icon: "☁️",
+    items: ["AWS", "Kafka", "Docker", "Git", "CI/CD"],
+  },
+  {
+    category: "Computer Science Foundations",
+    icon: "💡",
+    items: ["Problem Solving", "Data Structures & Algorithms"],
   },
 ];
 

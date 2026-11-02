@@ -5,7 +5,6 @@ import {
   Code2,
   BrainCircuit,
   Database,
-  MapPin,
 } from "lucide-react";
 
 import {
@@ -34,6 +33,7 @@ const experiences = experienceData.map((e) => ({
   org: e.company,
   time: e.period,
   location: e.location,
+  summary: e.summary,
   bullets: e.bullets,
 }));
 const skills = skillData.map((s) => ({
@@ -106,20 +106,21 @@ export default function App() {
         >
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-4 py-2 text-blue-700 text-sm font-medium mb-8">
-              <span className="h-2 w-2 rounded-full bg-blue-500" /> Open to
-              software engineering & AI/ML opportunities
+              <span className="h-2 w-2 rounded-full bg-blue-500" /> Open to AI
+              Engineer, Backend Engineer & Software Engineer roles
             </div>
             <p className="text-lg font-semibold text-slate-500 mb-4">
               Hi, I'm Thrinadh Sai Nimmagadda.
+            </p>
+            <p className="text-blue-600 font-semibold text-lg mb-4">
+              {personal.title}
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-[-0.055em] leading-[1.08]">
               I build reliable software{" "}
               <span className="text-blue-600">and intelligent systems.</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mt-8">
-              Software Engineer with 3+ years of industry experience building
-              backend systems, NLP pipelines, and applied AI products. I turn
-              complex problems into scalable, useful products.
+              {personal.tagline}
             </p>
             <div className="flex flex-wrap gap-3 mt-9">
               <a
@@ -143,10 +144,6 @@ export default function App() {
               >
                 <Download size={18} /> Download résumé
               </a>
-            </div>
-            <div className="flex items-center gap-2 text-slate-500 text-sm mt-9">
-              <MapPin size={16} /> Columbia, South Carolina · MS Computer
-              Science, University of South Carolina
             </div>
           </div>
         </section>
@@ -188,9 +185,9 @@ export default function App() {
             </p>
             <p>
               I'm pursuing an MS in Computer Science at the University of South
-              Carolina (expected December 2026), where I also teach Java and
-              data structures. I care about measurable improvements,
-              reliability, and building systems people can actually use.
+              Carolina, where I also teach Java and data structures. I care
+              about measurable improvements, reliability, and building systems
+              people can actually use.
             </p>
           </div>
         </section>
@@ -221,6 +218,11 @@ export default function App() {
                     </p>
                   </div>
                   <p className="text-sm text-slate-500 mt-2">{e.location}</p>
+                  {e.summary && (
+                    <p className="text-slate-600 mt-5 leading-relaxed max-w-4xl">
+                      {e.summary}
+                    </p>
+                  )}
                   <ul className="list-disc pl-5 text-slate-600 mt-5 space-y-2 leading-relaxed max-w-4xl">
                     {e.bullets.map((b) => (
                       <li key={b}>{b}</li>
@@ -312,7 +314,7 @@ export default function App() {
                         <BrainCircuit size={22} />,
                         <Code2 size={22} />,
                         <Database size={22} />,
-                      ][i]
+                      ][i % 4]
                     }
                     <h3 className="font-bold text-slate-900">{s.label}</h3>
                   </div>
@@ -371,8 +373,8 @@ export default function App() {
             Let's build something meaningful.
           </h2>
           <p className="text-slate-600 max-w-xl mx-auto mt-6 leading-relaxed">
-            I'm exploring software engineering and applied AI opportunities. If
-            my work aligns with your team, I'd love to connect.
+            I'm looking for AI Engineer, Backend Engineer, and Software Engineer
+            roles. If my work aligns with your team, I'd love to connect.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-9">
             <a
