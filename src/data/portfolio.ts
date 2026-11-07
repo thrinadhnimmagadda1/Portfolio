@@ -24,6 +24,15 @@ export const highlights = [
     value: "100",
     label: "LITE papers indexed · 101 searchable evidence chunks",
   },
+  {
+    value: "55.4%",
+    label:
+      "LITE · lower same-query latency on the optimized warm path (41.2s → 18.4s)",
+  },
+  {
+    value: "1.0 / 1.0",
+    label: "LITE · Recall@5 / MRR on the initial retrieval smoke test",
+  },
 ];
 
 export const experiences = [
