@@ -60,7 +60,7 @@ export const experiences = [
     id: 2,
     role: "Software Engineer",
     company: "Wipro",
-    location: "Hyderabad, Telangana, India",
+    location: "",
     period: "Jul 2021 – Aug 2024",
     type: "Full-time",
     bullets: [

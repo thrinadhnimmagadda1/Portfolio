@@ -215,7 +215,7 @@ export default function App() {
                       {e.time}
                     </p>
                   </div>
-                  <p className="text-sm text-slate-500 mt-2">{e.location}</p>
+                  {e.location && <p className="text-sm text-slate-500 mt-2">{e.location}</p>}
                   {e.summary && (
                     <p className="text-slate-600 mt-5 leading-relaxed max-w-4xl">
                       {e.summary}
