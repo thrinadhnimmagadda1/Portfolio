@@ -81,7 +81,7 @@ export const experiences = [
   {
     id: 2,
     role: "Software Engineer",
-    company: "Wipro",
+    company: "Wipro (Meta Ads)",
     location: "",
     period: "Jul 2021 – Aug 2024",
     type: "Full-time",
