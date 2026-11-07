@@ -104,7 +104,7 @@ export default function Hero() {
             >
               {[
                 { value: '20%', label: 'API Latency Reduction' },
-                { value: '100K+', label: 'Research Papers' },
+                { value: '100', label: 'Papers Indexed in LITE' },
                 { value: '~30%', label: 'Fewer Event-processing Failures' },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-sm">

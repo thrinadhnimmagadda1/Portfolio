@@ -10,7 +10,7 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/thrinadhsainimmagadda/",
   github: "https://github.com/thrinadhnimmagadda1",
   about:
-    "Software engineer focused on backend engineering and applied AI. At Wipro, I worked on backend services supporting Meta Ads advertiser event-processing workflows, reducing malformed and incomplete event-processing failures by ~30% and improving average response time by ~20%. At the Artificial Intelligence Institute of South Carolina, I built semantic search and document-grounded RAG for over 100,000 research papers.",
+    "Software engineer focused on backend engineering and applied AI. At Wipro, I worked on backend services supporting Meta Ads advertiser event-processing workflows, reducing malformed and incomplete event-processing failures by ~30% and improving average response time by ~20%. At the Artificial Intelligence Institute of South Carolina, I built LITE, a research intelligence platform combining hybrid retrieval, cross-encoder reranking, and citation-grounded synthesis with local Llama inference.",
 };
 
 export const experiences = [
@@ -35,13 +35,26 @@ export const experiences = [
     period: "May 2025 – Aug 2025",
     type: "Part-time",
     bullets: [
-      "Built an NLP clustering pipeline using Sentence-BERT embeddings and UMAP dimensionality reduction to organize 100K+ research papers into explorable topic clusters, enabling semantic search beyond keyword matching.",
-      "Added a per-paper RAG chat feature — chunking and embedding each paper’s PDF on demand, retrieving the top-3 most relevant chunks for a user’s question, and generating answers with a locally-run LLaMA model (via Ollama) to avoid per-query token costs — allowing researchers to ask questions directly about a specific paper’s methods and findings.",
-      "Developed Django REST Framework APIs to serve clustered document data and built a React frontend so researchers could interactively query and visualize results rather than working with static output.",
-      "Used asynchronous processing and caching to keep the interface responsive at scale, reducing query time from minutes to seconds for large cluster queries.",
+      "Indexed 100 research papers and 101 searchable evidence chunks.",
+      "Reduced retrieved context from 20 candidates to five passages.",
+      "Reduced same-query end-to-end latency from 41.2s to 18.4s, a 55.4% improvement on the optimized warm path.",
+      "Maintained Recall@5 of 1.0 and MRR of 1.0 on the initial retrieval smoke test.",
+      "Added paper-level and chunk-level citations to multi-document answers.",
+      "Built automated evaluation for Recall@K, MRR, mean latency, and p95 latency.",
     ],
-    tags: ["Python", "Sentence-BERT", "UMAP", "Django", "React", "RAG"],
-    summary: "",
+    tags: [
+      "Python",
+      "Django REST Framework",
+      "React",
+      "Sentence Transformers",
+      "BM25",
+      "Cross-encoder Reranking",
+      "HDBSCAN",
+      "SQLite",
+      "Ollama (Local Inference)",
+    ],
+    summary:
+      "Built LITE, an AI-powered research intelligence platform that discovers, organizes, and compares academic papers. The system combines BM25 lexical retrieval with Sentence Transformer embeddings, retrieves the top 20 passages, reranks them using a cross-encoder, and sends the five strongest evidence passages to a local Llama model for citation-grounded synthesis.",
   },
   {
     id: 2,
@@ -125,16 +138,41 @@ export const projects = [
   {
     id: 4,
     name: "LITE",
-    subtitle: "NLP · Research Paper Exploration",
+    subtitle: "AI · Research Intelligence",
     description:
-      "Organizes 100K+ research papers into explorable topics with Sentence-BERT, UMAP, and K-Means. Cosine silhouette scoring selects the cluster count, and TF-IDF surfaces the top three keywords per cluster. Django REST APIs and React support semantic exploration and paper-specific RAG Q&A.",
-    tags: ["Sentence-BERT", "UMAP", "K-Means", "TF-IDF", "Django", "React"],
-    impact: "100K+ research papers",
-    bullets: [],
+      "Discovers, organizes, and compares academic papers using BM25 and Sentence Transformer retrieval. A cross-encoder reranks 20 passages into five evidence passages for local Llama synthesis with paper-level and chunk-level citations. Indexed 100 papers and 101 evidence chunks; same-query latency improved from 41.2s to 18.4s on the optimized warm path. Initial retrieval smoke test: Recall@5 1.0 and MRR 1.0.",
+    tags: [
+      "Python",
+      "Django REST Framework",
+      "React",
+      "Sentence Transformers",
+      "BM25",
+      "Cross-encoder Reranking",
+      "HDBSCAN",
+      "SQLite",
+      "Ollama (Local Inference)",
+    ],
+    impact: "55.4% lower warm-path latency",
+    bullets: [
+      "Indexed 100 research papers and 101 searchable evidence chunks.",
+      "Reduced retrieved context from 20 candidates to five passages.",
+      "Reduced same-query end-to-end latency from 41.2s to 18.4s, a 55.4% improvement on the optimized warm path.",
+      "Maintained Recall@5 of 1.0 and MRR of 1.0 on the initial retrieval smoke test.",
+      "Added paper-level and chunk-level citations to multi-document answers.",
+      "Built automated evaluation for Recall@K, MRR, mean latency, and p95 latency.",
+    ],
     metrics: [
       {
-        value: "100K+ research papers",
-        label: "Project focus",
+        value: "100",
+        label: "Papers Indexed",
+      },
+      {
+        value: "55.4%",
+        label: "Warm-path Latency Improvement",
+      },
+      {
+        value: "1.0",
+        label: "Initial Recall@5",
       },
     ],
     featured: true,

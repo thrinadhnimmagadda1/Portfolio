@@ -150,7 +150,7 @@ export default function App() {
               ["3+", "Years in software engineering"],
               ["~30%", "Fewer event-processing failures"],
               ["~20%", "Average response time improvement"],
-              ["100K+", "Research papers organized"],
+              ["100", "Research papers indexed in LITE"],
             ].map(([num, desc]) => (
               <div key={desc}>
                 <div className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
@@ -226,7 +226,7 @@ export default function App() {
                       <li key={b}>{b}</li>
                     ))}
                   </ul>
-                  {e.org === "Wipro" && (
+                  {e.summary && (
                     <p className="text-sm text-slate-600 mt-5 leading-relaxed">
                       <span className="font-semibold text-slate-900">
                         Technologies:
