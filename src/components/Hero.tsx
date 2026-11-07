@@ -126,7 +126,7 @@ export default function Hero() {
                 Get in Touch
               </a>
               <a
-                href={`${import.meta.env.BASE_URL}Thrinadh_Sai_Nimmagadda_Resume.pdf`}
+                href={`${import.meta.env.BASE_URL}Thrinadh_Sai_Nimmagadda_Resume.pdf?v=feedf32ec57e`}
                 download="Thrinadh_Sai_Nimmagadda_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

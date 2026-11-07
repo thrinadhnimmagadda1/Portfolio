@@ -45,7 +45,7 @@ const skills = skillData.map((s) => ({
 const github = personal.github;
 const linkedin = personal.linkedin;
 const email = `mailto:${personal.email}`;
-const resume = `${import.meta.env.BASE_URL}Thrinadh_Sai_Nimmagadda_Resume.pdf`;
+const resume = `${import.meta.env.BASE_URL}Thrinadh_Sai_Nimmagadda_Resume.pdf?v=feedf32ec57e`;
 const nav = [
   ["About", "#about"],
   ["Experience", "#experience"],
