@@ -1,6 +1,6 @@
 import { Mail, ChevronDown, Download, Sparkles } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
-import { personal } from '../data/portfolio';
+import { personal, highlights } from '../data/portfolio';
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -66,7 +66,7 @@ export default function Hero() {
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-200 text-sm text-brand-700 font-medium mb-6 animate-fade-in">
               <Sparkles className="w-3.5 h-3.5 text-brand-500" />
-              AI / ML Engineering Roles
+              Backend & AI Engineering
             </div>
 
             {/* Name */}
@@ -102,11 +102,7 @@ export default function Hero() {
               className="grid grid-cols-3 gap-3 mb-8 animate-slide-up"
               style={{ animationDelay: '0.35s' }}
             >
-              {[
-                { value: '20%', label: 'API Latency Reduction' },
-                { value: '100', label: 'Papers Indexed in LITE' },
-                { value: '~30%', label: 'Fewer Event-processing Failures' },
-              ].map((stat) => (
+              {highlights.slice(1).map((stat) => (
                 <div key={stat.label} className="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-sm">
                   <div className="text-lg font-extrabold gradient-text">{stat.value}</div>
                   <div className="text-xs text-gray-400 mt-0.5 leading-tight">{stat.label}</div>

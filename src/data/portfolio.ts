@@ -13,6 +13,19 @@ export const personal = {
     "Software engineer focused on backend engineering and applied AI. At Wipro, I worked on backend services supporting Meta Ads advertiser event-processing workflows, reducing malformed and incomplete event-processing failures by ~30% and improving average response time by ~20%. At the Artificial Intelligence Institute of South Carolina, I built LITE, a research intelligence platform combining hybrid retrieval, cross-encoder reranking, and citation-grounded synthesis with local Llama inference.",
 };
 
+export const highlights = [
+  { value: "3+", label: "Years of industry software engineering experience" },
+  {
+    value: "~30%",
+    label: "Wipro · fewer malformed and incomplete event-processing failures",
+  },
+  { value: "~20%", label: "Wipro · faster average API response time" },
+  {
+    value: "100",
+    label: "LITE papers indexed · 101 searchable evidence chunks",
+  },
+];
+
 export const experiences = [
   {
     id: 0,
@@ -234,6 +247,7 @@ export const skills = [
       "SMOTE",
       "BERT",
       "Sentence-Transformers",
+      "HDBSCAN",
     ],
   },
   {
@@ -248,6 +262,8 @@ export const skills = [
       "AI Agents",
       "Hugging Face",
       "RAGAS",
+      "Llama",
+      "Ollama",
     ],
   },
   {
@@ -256,6 +272,7 @@ export const skills = [
     items: [
       "FastAPI",
       "Django",
+      "Django REST Framework",
       "Flask",
       "Spring Boot",
       "REST APIs",
@@ -266,7 +283,17 @@ export const skills = [
   {
     category: "Databases & Retrieval",
     icon: "🗄️",
-    items: ["PostgreSQL", "MySQL", "Redis", "FAISS", "ChromaDB", "DBMS"],
+    items: [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "Redis",
+      "BM25",
+      "Cross-encoder Reranking",
+      "FAISS",
+      "ChromaDB",
+      "DBMS",
+    ],
   },
   {
     category: "Data & Analytics",
@@ -276,7 +303,7 @@ export const skills = [
   {
     category: "Cloud & Engineering Tools",
     icon: "☁️",
-    items: ["AWS", "Kafka", "Docker", "Git", "CI/CD"],
+    items: ["AWS", "Kafka", "Docker", "Git", "CI/CD", "Postman"],
   },
   {
     category: "Computer Science Foundations",

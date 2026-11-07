@@ -33,7 +33,7 @@ export default function Projects() {
             What I've <span className="gradient-text">Built</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto mt-3 animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-            End-to-end AI/ML systems with measurable impact — from research to production.
+            Applied AI and backend engineering projects with measured results and documented evaluation.
           </p>
         </div>
 

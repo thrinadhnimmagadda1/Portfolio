@@ -13,6 +13,7 @@ import {
 } from "./components/Icons";
 import {
   personal,
+  highlights,
   projects as projectData,
   experiences as experienceData,
   skills as skillData,
@@ -146,12 +147,7 @@ export default function App() {
         </section>
         <section className="border-y border-slate-100 bg-slate-50/70">
           <div className="mx-auto max-w-6xl px-5 md:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-7">
-            {[
-              ["3+", "Years in software engineering"],
-              ["~30%", "Fewer event-processing failures"],
-              ["~20%", "Average response time improvement"],
-              ["100", "Research papers indexed in LITE"],
-            ].map(([num, desc]) => (
+            {highlights.map(({ value: num, label: desc }) => (
               <div key={desc}>
                 <div className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
                   {num}
@@ -174,13 +170,7 @@ export default function App() {
             </h2>
           </div>
           <div className="space-y-5 text-lg text-slate-600 leading-relaxed">
-            <p>
-              I'm a software engineer who enjoys working at the intersection of
-              strong backend foundations and practical AI. At Wipro, I worked on
-              Meta Ads advertiser event-processing services, Kafka workflows,
-              and API performance. More recently, I've built semantic search,
-              RAG, and AI agent workflows.
-            </p>
+            <p>{personal.about}</p>
             <p>
               I'm pursuing an MS in Computer Science at the University of South
               Carolina, where I also teach Java and data structures. I care
@@ -215,7 +205,9 @@ export default function App() {
                       {e.time}
                     </p>
                   </div>
-                  {e.location && <p className="text-sm text-slate-500 mt-2">{e.location}</p>}
+                  {e.location && (
+                    <p className="text-sm text-slate-500 mt-2">{e.location}</p>
+                  )}
                   {e.summary && (
                     <p className="text-slate-600 mt-5 leading-relaxed max-w-4xl">
                       {e.summary}

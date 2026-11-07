@@ -71,7 +71,7 @@ export default function Contact() {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto mt-3 animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
-            I'm open to AI/ML engineering roles, research collaborations, and interesting projects. Let's build something great together.
+            I'm looking for AI Engineer, Backend Engineer, and Software Engineer roles. Let's build something meaningful together.
           </p>
         </div>
 

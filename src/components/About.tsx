@@ -5,8 +5,8 @@ import { personal } from '../data/portfolio';
 const highlights = [
   { icon: Brain, label: 'ML Systems', desc: 'TF-IDF, BERT, XGBoost — from model training to production inference' },
   { icon: Code2, label: 'Python & Java', desc: 'Full-stack engineering across Spring Boot, FastAPI, Django, and Flask' },
-  { icon: Layers, label: 'NLP Pipelines', desc: 'SBERT embeddings, UMAP reduction, K-Means clustering at scale' },
-  { icon: Zap, label: 'Latency Optimization', desc: 'Async processing and caching reduced queries from minutes to seconds' },
+  { icon: Layers, label: 'NLP Pipelines', desc: 'BM25 + Sentence Transformers, cross-encoder reranking, and evidence-grounded synthesis' },
+  { icon: Zap, label: 'Latency Optimization', desc: 'LITE same-query latency: 41.2s to 18.4s on the optimized warm path' },
 ];
 
 export default function About() {
