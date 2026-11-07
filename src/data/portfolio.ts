@@ -225,7 +225,7 @@ export const education = [
     school: "University of South Carolina",
     location: "Columbia, South Carolina",
     gpa: "3.5",
-    period: "Aug 2024 – Dec 2026 (expected)",
+    period: "Aug 2024 – Dec 2026",
   },
   {
     id: 2,
