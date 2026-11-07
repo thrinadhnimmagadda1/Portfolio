@@ -10,7 +10,7 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/thrinadhsainimmagadda/",
   github: "https://github.com/thrinadhnimmagadda1",
   about:
-    "Software engineer focused on backend engineering and applied AI. At Wipro, I improved résumé parsing accuracy from 50% to 80% and reduced API latency by 20%. At the Artificial Intelligence Institute of South Carolina, I built semantic search and document-grounded RAG for over 100,000 research papers.",
+    "Software engineer focused on backend engineering and applied AI. At Wipro, I worked on backend services supporting Meta Ads advertiser event-processing workflows, reducing malformed and incomplete event-processing failures by ~30% and improving average response time by ~20%. At the Artificial Intelligence Institute of South Carolina, I built semantic search and document-grounded RAG for over 100,000 research papers.",
 };
 
 export const experiences = [
@@ -51,16 +51,22 @@ export const experiences = [
     period: "Jul 2021 – Aug 2024",
     type: "Full-time",
     bullets: [
-      "Built SQL storage and REST API integrations connecting structured resume data to automated job application forms.",
-      "Improved PDF and Word resume processing by normalizing formatting, handling broken line breaks, and resolving extraction issues across different resume layouts.",
-      "Fixed garbled extraction in two-column PDF resumes by grouping text blocks based on horizontal position and reconstructing column-wise reading order.",
-      "Added a secondary extraction pass to identify skills embedded within job descriptions and experience text, improving extraction accuracy from ~50% to ~80% on problematic resume formats.",
-      "Reduced API latency by ~20% by optimizing the response flow and batching database writes.",
-      "Wrote unit tests and debugged data quality issues in extracted resume fields to improve autofill reliability.",
+      "Contributed to Java/Spring Boot microservices and REST API integrations, implementing data mappings, validation logic, and SQL persistence changes within existing advertiser backend services.",
+      "Monitored and optimized Apache Kafka event streams across microservices; analyzed payloads and logs to resolve message-processing failures and ensure downstream data consistency.",
+      "Improved advertiser event data quality through field validation, normalization, and duplicate-event handling, reducing malformed and incomplete event-processing failures by ~30%.",
+      "Investigated API latency and production issues using service logs, Postman, and database tracing; optimized SQL operations and reduced unnecessary database round trips, improving average response time by ~20%.",
     ],
-    tags: ["Python", "REST APIs", "Document Processing", "Backend Engineering"],
+    tags: [
+      "Java",
+      "Spring Boot",
+      "REST APIs",
+      "Apache Kafka",
+      "SQL",
+      "Microservices",
+      "Postman",
+    ],
     summary:
-      "Worked on a resume parsing and job application autofill platform for recruiting client MPG, focusing on document extraction, backend integration, accuracy, and performance.",
+      "Worked on backend services supporting Meta Ads advertiser event-processing workflows, with a focus on microservices, API integrations, event processing, data quality, and production reliability.",
   },
 ];
 

@@ -35,6 +35,7 @@ const experiences = experienceData.map((e) => ({
   location: e.location,
   summary: e.summary,
   bullets: e.bullets,
+  tags: e.tags,
 }));
 const skills = skillData.map((s) => ({
   label: s.category,
@@ -147,8 +148,8 @@ export default function App() {
           <div className="mx-auto max-w-6xl px-5 md:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-7">
             {[
               ["3+", "Years in software engineering"],
-              ["50% → 80%", "Resume parsing accuracy"],
-              ["20%", "API latency improvement"],
+              ["~30%", "Fewer event-processing failures"],
+              ["~20%", "Average response time improvement"],
               ["100K+", "Research papers organized"],
             ].map(([num, desc]) => (
               <div key={desc}>
@@ -176,8 +177,9 @@ export default function App() {
             <p>
               I'm a software engineer who enjoys working at the intersection of
               strong backend foundations and practical AI. At Wipro, I worked on
-              resume parsing, document extraction, and API performance. More
-              recently, I've built semantic search, RAG, and AI agent workflows.
+              Meta Ads advertiser event-processing services, Kafka workflows,
+              and API performance. More recently, I've built semantic search,
+              RAG, and AI agent workflows.
             </p>
             <p>
               I'm pursuing an MS in Computer Science at the University of South
@@ -224,6 +226,14 @@ export default function App() {
                       <li key={b}>{b}</li>
                     ))}
                   </ul>
+                  {e.org === "Wipro" && (
+                    <p className="text-sm text-slate-600 mt-5 leading-relaxed">
+                      <span className="font-semibold text-slate-900">
+                        Technologies:
+                      </span>{" "}
+                      {e.tags.join(" · ")}
+                    </p>
+                  )}
                 </article>
               ))}
             </div>
